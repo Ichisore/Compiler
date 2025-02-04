@@ -1,12 +1,38 @@
 ﻿using System;
 
-namespace Scanner
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        Random random = new Random();
+        int[] array = new int[15];
+
+        for (int i = 0; i < array.Length; i++)
         {
-            Console.WriteLine("Hello World!");
+            array[i] = random.Next(-10, 15);
         }
+
+        Console.WriteLine("Исходный массив:");
+        PrintArray(array);
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] < 0)
+            {
+                array[i] = 0;
+            }
+        }
+
+        // Выводим измененный массив
+        Console.WriteLine("Измененный массив:");
+        PrintArray(array);
+    }
+
+    static void PrintArray(int[] array)
+    {
+        foreach (var item in array)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
     }
 }
