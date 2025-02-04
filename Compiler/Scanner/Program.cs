@@ -22,7 +22,7 @@ class Program
             }
         }
 
-        Console.WriteLine("Измененный массив:");
+        Console.WriteLine("Измененный массив");
         PrintArray(array);
     }
     static void PrintArray(int[] array)
